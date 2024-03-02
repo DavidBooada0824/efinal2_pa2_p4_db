@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+</head>
+
+<body>
+	
+
+	
+	<div class="contenedor">
+		<h1 style="color: darkblue; text-align: center;">
+			Bievenido Sistema de matriculacion, Creacion de nuevo estudiate, Profesor y Materia</h1>
+	</div>
+	
+	
+	
+		<form th:action="@{/estudiantes/nuevoEstudiante}" th:object="${Estudiante}" method="get">
+		<table>
+			<tr>
+				<td>
+					<input class="btn btn-primary" type="submit" value="Agregar Estudiante">
+				</td>
+
+			</tr>
+		</table>
+	</form>
+	<br>
+	
+	<form th:action="@{/materias/nuevaMateria}" th:object="${Materia}" method="get">
+		<table>
+			<tr>
+				<td>
+					<input class="btn btn-primary" type="submit" value="Agregar Materia">
+				</td>
+
+			</tr>
+		</table>
+	</form>
+	<br>
+	
+	<form th:action="@{/matriculas/nuevaMatricula}" th:object="${Matricula}" method="get">
+		<table>
+			<tr>
+				<td>
+					<input class="btn btn-primary" type="submit" value="Ingresar Matricula">
+				</td>
+
+			</tr>
+		</table>
+	</form>
+	<br>
+	
+		<form th:action="@{/matriculas/buscarTodos}" th:object="${Matricula}" method="get">
+		<table>
+			<tr>
+				<td>
+					<input class="btn btn-primary" type="submit" value="Reporte de Matriculas">
+				</td>
+
+			</tr>
+		</table>
+	</form>
+	<br>
+
+
+
+
+
+</body>
+
+</html>
